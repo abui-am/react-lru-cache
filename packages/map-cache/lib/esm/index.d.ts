@@ -1,2 +1,20 @@
-export { default as Hello } from './hello';
-export * from './hello';
+import { ActionType, FetchParams, KeyParams, Observer, StoredData } from './types';
+declare const _default: {
+    cache: Map<any, any>;
+    defaultExpirationSeconds: number;
+    observers: Observer[];
+    subscribe(func: Observer): void;
+    unsubscribe(func: Observer): void;
+    notify<T>(actionType: ActionType, data: T): void;
+    setDefaultExpirationSeconds(seconds: number): void;
+    fetch<T_1>({ key, params, callback, expiresInSeconds, }: FetchParams): Promise<T_1>;
+    clear(): void;
+    deleteKey(key: string): void;
+    size(): number;
+    computeExpirationTime(expiresInSeconds: number): number;
+    generateKey({ key, params }: KeyParams): string;
+    set<T_2>({ key, data, expiration }: StoredData<T_2>): T_2;
+    get<T_3>(key: string): T_3 | null;
+    hasExpired(expiration: number): boolean;
+};
+export default _default;
