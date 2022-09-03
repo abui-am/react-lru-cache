@@ -1,0 +1,24 @@
+{
+  "name": "react-lru-cache",
+  "version": "1.0.0",
+  "description": "React LRU cache library with buil-it DevTools",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
+    "lerna": "^5.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "build": "lerna run build --scope map-cache",
+    "watch": "lerna run watch --scope map-cache",
+    "package": "lerna exec --scope map-cache -- npm pack"
+  }
+}
